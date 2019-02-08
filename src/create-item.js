@@ -7,11 +7,13 @@ form.addEventListener('submit', function(event){
     //pull input and store in an object.
     const name = form.elements.name.value;
     const category = form.elements.category.value;
+    const quantity = form.elements.quantity.value;
     //console.log(name, category);
     
     const singleItem = {
         name: name,
-        category: category
+        category: category,
+        quantity: quantity
     };
 
     let allItems = [];

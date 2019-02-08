@@ -11,11 +11,22 @@
         <h1>Total Inventory</h1>
     </header>
     <main>
+        <form id="form">
+            <label for="category-sort">Sort by Category:</label>
+            <select id="category-sort">
+                <option value="winter">Winter</option>
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+                <option value="fall">Fall</option>
+            </select>
+            <button>GO!</button>
+        </form>
         <table>
             <thead>
                 <tr>
                     <td>Item</td>
                     <td>Category</td>
+                    <td>Quantity</td>
                 </tr>
             </thead>
             <tbody id="all-items">
