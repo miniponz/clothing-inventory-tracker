@@ -28,10 +28,9 @@ form.addEventListener('submit', function(event){
     window.localStorage.setItem('allItems', serialize);
     // make jsonString
     // window.localStorage.set item
-
     console.log(allItems);
 
-    window.location = 'inventory.html';
+    window.location = 'item-detail.html';
     
 });
 
