@@ -7,7 +7,30 @@
     <title>Create Inventory Item</title>
 </head>
 <body>
-    
+    <header></header>
+    <main>
+        <form id="form">
+            <fieldset>
+                <legend>Item Name:</legend>
+                <input id="name" type="text" placeholder="Enter Listing Here">
+            </fieldset>
+            <fieldset>
+                <legend>Choose a Category:</legend>
+                <select id="category">
+                    <option hidden selected disabled>Categories</option>
+                    <option value="winter">Winter</option>
+                    <option value="spring">Spring</option>
+                    <option value="summer">Summer</option>
+                    <option value="fall">Fall</option>
+                </select>
+            </fieldset>
+            <button id="submit">Submit Item</button>
+        </form>
+    </main>
+    <footer>
+        <a href="inventory.html">View Full Inventory</a>
+        <a href="item-detail.html">View Item Detail</a>
+    </footer>
     <script type="module" src="src/create-item.js"></script>
 </body>
 </html>
