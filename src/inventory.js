@@ -8,9 +8,34 @@ if(jsonString){
 
 const tbody = document.getElementById('all-items');
 
-function populateTable() {
-    for(let i = 0 ; i < allItems.length; i++){
-        const currentItem = allItems[i];
+const form = document.getElementById('form');
+const categorySort = document.getElementById('category-sort');
+   
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    let matchingItems = [];
+    
+    const category = categorySort.value;
+
+    for(let i = 0; i < allItems.length; i++){
+        let currentItem = allItems[i];
+    
+        if(currentItem.category === category){
+            matchingItems.push(currentItem);
+        } 
+    }
+    while(tbody.firstChild){
+        tbody.removeChild(tbody.firstChild);
+    }
+    populateTable(matchingItems);
+
+});
+
+populateTable(allItems);
+
+function populateTable(array) {
+    for(let i = 0 ; i < array.length; i++){
+        const currentItem = array[i];
 
         const tr = document.createElement('tr');
         tbody.appendChild(tr);
@@ -30,35 +55,6 @@ function populateTable() {
         quantityCell.textContent = currentItem.quantity;
         tr.appendChild(quantityCell);
 
-    //next this for loop in a function 
+    //nest this for loop in a function 
     }
 }
-
-const form = document.getElementById('form');
-const categorySort = document.getElementById('category-sort');
-
-form.addEventListener('submit', function(event){
-    event.preventDefault();
-    
-    const sortValue = categorySort.value;
-    console.log(sortValue); 
-
-    for(let i = 0; i < allItems.length; i++){
-        let currentItem = allItems[i];
-    
-        if(currentItem.category === sortValue){
-           
-            allItems.push(currentItem);
-        } 
-    }
-    // call function again only when category sought === category.value. 
-    populateTable();
-});
-
-// call the for loop function to fill the table intially. 
-
-// set constant to grab form, add event listener "submit"
-    //populateTable(category);
-
-// create new search params that will sort based on value, 
-// will also have to figure out how to assign to URI
