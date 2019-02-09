@@ -1,0 +1,37 @@
+#welcome {
+    background: url('./assets/fire.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#welcome-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#body-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 300px;
+}
+
+.start-button {
+    border: solid white 2px;
+    margin: 15px;
+    padding: 12px;
+    font-size: 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: slategray;
+    opacity: .5;
+}
