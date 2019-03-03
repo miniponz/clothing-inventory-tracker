@@ -1,22 +1,8 @@
 import './html-equal.js';
 import './riley-tests.js';
+import makeItemTemplate from '../src/item.template.js';
 
 const test = QUnit.test;
-
-function makeItemTemplate(item) {
-    const uriName = encodeURIComponent(item.name);
-    
-    const dom = `
-    <tr>
-        <td><a href="item-detail.html?name=${uriName}">${item.name}</a></td>
-        <td>${item.category}</td>
-        <td>${item.quantity}</td>
-    </tr>`;
-
-    const template = document.createElement('template');
-    template.innerHTML = dom;
-    return template.content;
-}
 
 test('creates html from object gathered from local storage', assert => {
     //arrange
