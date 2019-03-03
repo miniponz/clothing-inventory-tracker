@@ -8,7 +8,8 @@ test('creates html from object gathered from local storage', assert => {
     //arrange
     const item = {
         name: 'Wool Socks', 
-        category: 'winter', 
+        season: 'winter', 
+        category: 'shelter',
         quantity: '4'
     };
 
@@ -20,6 +21,7 @@ test('creates html from object gathered from local storage', assert => {
     <tr>
         <td><a href="item-detail.html?name=Wool%20Socks">Wool Socks</a></td>
         <td>winter</td>
+        <td>shelter</td>
         <td>4</td>
     </tr>
     `);

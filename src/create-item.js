@@ -1,19 +1,16 @@
-const form = document.getElementById('form');
+const itemForm = document.getElementById('item-form');
 
 
-
-form.addEventListener('submit', function(event){
+itemForm.addEventListener('submit', event => {
     event.preventDefault();
+    const formData = new FormData(itemForm);
     //pull input and store in an object.
-    const name = form.elements.name.value;
-    const category = form.elements.category.value;
-    const quantity = form.elements.quantity.value;
-    //console.log(name, category);
     
     const singleItem = {
-        name: name,
-        category: category,
-        quantity: quantity
+        name: formData.get('name'),
+        season: formData.get('season'),
+        category: formData.get('category'),
+        quantity: formData.get('quantity')
     };
 
     let allItems = [];

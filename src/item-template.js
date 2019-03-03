@@ -4,6 +4,7 @@ export default function makeItemTemplate(item) {
     const dom = `
     <tr>
         <td><a href="item-detail.html?name=${uriName}">${item.name}</a></td>
+        <td>${item.season}</td>
         <td>${item.category}</td>
         <td>${item.quantity}</td>
     </tr>`;

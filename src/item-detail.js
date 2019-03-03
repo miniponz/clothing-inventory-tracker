@@ -23,10 +23,12 @@ for(let i = 0; i < allItems.length; i++){
 }
 
 const name = document.getElementById('name');
+const season = document.getElementById('season');
 const category = document.getElementById('category');
 const quantity = document.getElementById('quantity');
 
 //text content = something.value
 name.textContent = populateItem.name;
+season.textContent = populateItem.season;
 category.textContent = populateItem.category;
-quantity.textContent = populateItem.quantity;
+quantity.textContent = populateItem.quantity;   
