@@ -1,6 +1,5 @@
 const itemForm = document.getElementById('item-form');
 
-
 itemForm.addEventListener('submit', event => {
     event.preventDefault();
     const formData = new FormData(itemForm);
@@ -30,6 +29,5 @@ itemForm.addEventListener('submit', event => {
     console.log(allItems);
 
     window.location = 'item-detail.html';
-    
 });
 
